@@ -58,6 +58,9 @@ void printUserInfo(int index) {
     printf("Balance:   | %.1f\n", ur.balance);
 }
 
+static const char* header = "|ID         |Name       |Contact    |Address    |Balance    |";
+static const char* divide = "+-----------+-----------+-----------+-----------+-----------+";
+
 static void printUserInfoInTable(int index) {
     printf(
         "|%-10s |%-10s |%-10s |%-10s |%-10.1f |\n",
