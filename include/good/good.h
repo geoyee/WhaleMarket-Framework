@@ -1,3 +1,6 @@
+#ifndef _GOOD_H_
+#define _GOOD_H_
+
 #include "config.h"
 #include "bool.h"
 
@@ -42,3 +45,5 @@ void searchGoodNameInAdmin(const char* name);
 void printGoodsAboutSellerID(const char* id);
 
 void printGoodsAboutBuyerID(const char* id);
+
+#endif

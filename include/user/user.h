@@ -1,3 +1,6 @@
+#ifndef _USER_H_
+#define _USER_H_
+
 #include "config.h"
 #include "bool.h"
 
@@ -27,3 +30,5 @@ bool deletUser(const char* id, const char* who);
 bool checkPassword(const char* name, const char* passwd, int* index);
 
 bool userTopUp(const char* id, double money);
+
+#endif
