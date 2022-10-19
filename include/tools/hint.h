@@ -5,7 +5,7 @@ void welcomeMessage();
 void successMessage();
 void failureMessage();
 void illegalMessage();
-void loadimgMessage();
+void loadingMessage();
 void exitingMessage();
 void invalidMessage();
 

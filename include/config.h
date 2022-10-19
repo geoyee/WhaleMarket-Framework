@@ -7,4 +7,7 @@
 #define MAX_ORDER 256
 #define MENU_NUM 8
 
+#define ADMIN_NAME "admin"
+#define ADMIN_PASS "123456"
+
 #endif
