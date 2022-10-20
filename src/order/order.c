@@ -9,7 +9,7 @@ static int totalOrder = 0;
 
 static const char* filePath = "src/data/order.txt";
 
-void pullOrderFromFile() {
+void pullOrdersFromFile() {
     totalOrder = 0;
     FILE* pf = fopen(filePath, "r");
     if (pf) {
@@ -29,7 +29,7 @@ void pullOrderFromFile() {
     }
 }
 
-void pushOrderToFile() {
+void pushOrdersToFile() {
     FILE* pf = fopen(filePath, "w");
     for (int i = 0; i < totalOrder; i++) {
 	fprintf(

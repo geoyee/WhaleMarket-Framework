@@ -13,9 +13,9 @@ typedef struct {
     char buyer_id[MAX_LEN];
 } Order;
 
-void pullOrderFromFile();
+void pullOrdersFromFile();
 
-void pushOrderToFile();
+void pushOrdersToFile();
 
 bool addOrder(Order* order);
 
