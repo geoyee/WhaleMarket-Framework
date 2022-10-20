@@ -25,7 +25,7 @@ void printUsersInfo();
 
 bool addUser(User* user);
 
-bool deletUser(const char* id, const char* who);
+bool deleteUserByID(const char* id, const char* who);
 
 bool checkPassword(const char* name, const char* passwd, int* index);
 

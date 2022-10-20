@@ -72,7 +72,7 @@ int searchGoodByID(const char* id) {
     return -1;
 }
 
-bool deletGoodByID(const char* id, const char* who) {
+bool deleteGoodByID(const char* id, const char* who) {
     int index = searchGoodByID(id);
     if (index == -1) {
 	return false;

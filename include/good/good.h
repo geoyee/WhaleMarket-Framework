@@ -30,7 +30,7 @@ bool addGood(Good* good);
 
 int searchGoodByID(const char* id);
 
-bool deletGoodByID(const char* id, const char* who);
+bool deleteGoodByID(const char* id, const char* who);
 
 void printGoodInfo(int index);
 

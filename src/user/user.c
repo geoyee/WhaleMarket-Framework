@@ -110,7 +110,7 @@ static int searchUserByID(const char* id) {
     return -1;
 }
 
-bool deletUser(const char* id, const char* who) {
+bool deleteUserByID(const char* id, const char* who) {
     if (who) {
         return false;
     }

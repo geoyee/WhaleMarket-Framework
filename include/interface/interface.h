@@ -40,6 +40,34 @@ static void T##YPE##_Login() { \
     failureMessage(); \
 }
 
+#define make_all(T, YPE) \
+static void all##T##YPE##s() { \
+    print##T##YPE##sInfo(); \
+    successMessage(); \
+}
+
+#define make_ban(T, YPE, Name, Who) \
+static void ban##T##YPE() { \
+    char id[MAX_LEN]; \
+    printf("Please input %s ID to be banned: ", Name); \
+    scanf("%s", id); \
+    if (delete##T##YPE##ByID(id, Who)) { \
+	successMessage(); \
+    } else { \
+	failureMessage(); \
+    } \
+}
+
+#define make_search(Who) \
+static void search() { \
+    char buffer[MAX_LEN]; \
+    printf("Please input Good Name to search: "); \
+    scanf("%s", buffer); \
+    loadingMessage(); \
+    searchGoodNameIn##Who(buffer); \
+    successMessage(); \
+}
+
 extern int curUser;
 
 void inv();
