@@ -1,6 +1,8 @@
 #ifndef _INTERFACE_H_
 #define _INTERFACE_H_
 
+#include <stdlib.h>
+#include "bool.h"
 #include "tools/hint.h"
 #include "menu/menu.h"
 #include "user/user.h"
@@ -67,6 +69,18 @@ static void search() { \
     searchGoodNameIn##Who(buffer); \
     successMessage(); \
 }
+
+#define check_double \
+    double m = atof(buffer); \
+    while (true) { \
+	if (m > 0) { \
+	    break; \
+	} \
+	illegalMessage(); \
+	printf("Please try again: "); \
+	scanf("%s", buffer); \
+	m = atof(buffer); \
+    }
 
 extern int curUser;
 
