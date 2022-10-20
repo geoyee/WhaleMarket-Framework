@@ -82,6 +82,21 @@ static void search() { \
 	m = atof(buffer); \
     }
 
+#define make_modify(TYPE, W, HO) \
+static void modify_##TYPE() { \
+    char buffer[MAX_LEN]; \
+    printf("Please input new %s: ", #TYPE); \
+    scanf("%s", buffer); \
+    W##HO* x = get##W##HO##ByIndex(cur##W##HO); \
+    strcpy(x->TYPE, buffer); \
+    successMessage(); \
+}
+
+#define fail { \
+    failureMessage(); \
+    return; \
+}
+
 extern int curUser;
 
 void inv();
