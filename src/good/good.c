@@ -151,3 +151,12 @@ void printGoodsAboutSellerID(const char* id) {
     }
 }
 
+void printGoodsAboutBuyerID(const char* id) {
+    print_header
+    for (int i = 0; i < totalGood; i++) {
+	if (goods[i].state == SELLING) {    
+	    printGoodInfoInTable(i);
+	    print_divide
+	}
+    }
+}

@@ -92,12 +92,19 @@ static void modify_##TYPE() { \
     successMessage(); \
 }
 
+#define make_my(TYPE, W, HO) \
+static void my##TYPE() { \
+    print##TYPE##About##W##HO##ID(getUserByIndex(curUser)->id); \
+    successMessage(); \
+}
+
 #define fail { \
     failureMessage(); \
     return; \
 }
 
 extern int curUser;
+extern int curGood;
 
 void inv();
 
